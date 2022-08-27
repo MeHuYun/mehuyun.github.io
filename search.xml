@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>折腾我的小栈</title>
+      <link href="/posts/33319.html"/>
+      <url>/posts/33319.html</url>
+      
+        <content type="html"><![CDATA[<p>一台连接互联网的安卓手机足矣！我只有一台好几年了的魅族X8，记得还是二0一八年帮村委的帮扶工作组做资料的时候换的它，它的前任360手机不幸夭折！虽然之后自个拆换了一套带中框的屏幕又恢复如初，成了媳妇刷视频的机器！</p><h2 id="开始进入正题："><a href="#开始进入正题：" class="headerlink" title="开始进入正题："></a>开始进入正题：</h2><h3 id="1-Termux-下载安装"><a href="#1-Termux-下载安装" class="headerlink" title="1.Termux 下载安装"></a>1.Termux 下载安装</h3><p>官方站点<a href="https://termu.dev/">https://termu.dev</a></p><p>F-droid<a href="https://f-droid.org/en/packages/com.termux">F-droid&#x2F;Termux</a>（建议）</p><p>Github<a href="https://github.com/termux">Github&#x2F;Termux</a>（有墙）</p><h3 id="2-Termux-下安装Nodejs"><a href="#2-Termux-下安装Nodejs" class="headerlink" title="2.Termux 下安装Nodejs"></a>2.Termux 下安装Nodejs</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pkg install nodejs</span><br></pre></td></tr></table></figure><h3 id="3-Termux-下安装Hexo"><a href="#3-Termux-下安装Hexo" class="headerlink" title="3.Termux 下安装Hexo"></a>3.Termux 下安装Hexo</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br><span class="line">hexo init Blog</span><br><span class="line"><span class="built_in">cd</span> Blog</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure><p>注：Blog 为 Hexo 本地文件夹，可自个取名称</p><h3 id="4-Github-下建造仓库"><a href="#4-Github-下建造仓库" class="headerlink" title="4.Github 下建造仓库"></a>4.Github 下建造仓库</h3><p>注：按照Github Pages 新建仓库名：YourGithubUseName.github.io</p><h3 id="5-Termux-下建造hexo"><a href="#5-Termux-下建造hexo" class="headerlink" title="5.Termux 下建造hexo"></a>5.Termux 下建造hexo</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> Blog</span><br><span class="line">git <span class="built_in">clone</span> -b master https://gitee.com/immyw/hexo-theme-butterfly.git themes/butterfly</span><br><span class="line">npm install hexo-abbrlink --save</span><br><span class="line">npm install hexo-butterfly-douban --save</span><br><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">npm install hexo-generator-feed --save</span><br><span class="line">npm install hexo-generator-search --save</span><br><span class="line">npm install hexo-generator-sitemap --save</span><br><span class="line">npm install hexo-filter-nofollow --save</span><br><span class="line">npm install hexo-renderer-pug --save</span><br><span class="line">npm install hexo-renderer-stylus --save</span><br><span class="line">npm install hexo-tag-aplayer --save</span><br><span class="line">npm install hexo-wordcount --save</span><br><span class="line"><span class="built_in">cp</span> themes/butterfly/_config.yml _config.butterfly.yml</span><br><span class="line">vim _config.butterfly.yml</span><br><span class="line">vim _config.yml</span><br></pre></td></tr></table></figure><p>进入 Blog 下克隆主题，安装插件，配置主题，配置Hexo…</p><p>建议翻越围栏操作比较好，CNPM运行流程感觉不好…</p><h3 id="6-Termux-下部署仓库"><a href="#6-Termux-下部署仓库" class="headerlink" title="6.Termux 下部署仓库"></a>6.Termux 下部署仓库</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean <span class="comment">#清除已生成文件数据</span></span><br><span class="line">hexo generate <span class="comment">#生成静态页面</span></span><br><span class="line">hexo deploy <span class="comment">#部署页面</span></span><br></pre></td></tr></table></figure><p>注：前提配置SSH，Github…</p><h3 id="7-绑定解析域名"><a href="#7-绑定解析域名" class="headerlink" title="7.绑定解析域名"></a>7.绑定解析域名</h3><p>CNAME文件，Github Pages 仓库设置…</p><h3 id="8-开始Markdown"><a href="#8-开始Markdown" class="headerlink" title="8.开始Markdown"></a>8.开始Markdown</h3><p>也就是使用Markdown标记语言书写MD文档…</p><h2 id="注：这是我自个折腾的流程而已，某些命令可以合成一组，为了排班一条一条展示，细节方面有点繁琐却也简单，后面会有单独文章详细表述，或搜索引擎咨询…"><a href="#注：这是我自个折腾的流程而已，某些命令可以合成一组，为了排班一条一条展示，细节方面有点繁琐却也简单，后面会有单独文章详细表述，或搜索引擎咨询…" class="headerlink" title="注：这是我自个折腾的流程而已，某些命令可以合成一组，为了排班一条一条展示，细节方面有点繁琐却也简单，后面会有单独文章详细表述，或搜索引擎咨询…"></a>注：这是我自个折腾的流程而已，某些命令可以合成一组，为了排班一条一条展示，细节方面有点繁琐却也简单，后面会有单独文章详细表述，或搜索引擎咨询…</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> 生活·Live </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 囫囩 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>生活很温馨</title>
+      <link href="/posts/47376.html"/>
+      <url>/posts/47376.html</url>
+      
+        <content type="html"><![CDATA[<p>生活很温馨，认真才幸福！</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 生活·Live </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 生活 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>代码很美妙</title>
+      <link href="/posts/13619.html"/>
+      <url>/posts/13619.html</url>
+      
+        <content type="html"><![CDATA[<p>代码很美妙，如诗才优雅！</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 代码·Code </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 代码 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>分享很快乐</title>
+      <link href="/posts/60748.html"/>
+      <url>/posts/60748.html</url>
+      
+        <content type="html"><![CDATA[<p>分享很快乐，众乐才有道！</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 分享·Share </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 分享 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>中医很博大</title>
+      <link href="/posts/38635.html"/>
+      <url>/posts/38635.html</url>
+      
+        <content type="html"><![CDATA[<p>中医很博大，良药才去病！</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 中医·Zhongyi </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 中医 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>农艺很精深</title>
+      <link href="/posts/10904.html"/>
+      <url>/posts/10904.html</url>
+      
+        <content type="html"><![CDATA[<p>农艺很精深，种殖才挣钱！</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 农艺·Farming </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 农艺 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>游记很随意</title>
+      <link href="/posts/20990.html"/>
+      <url>/posts/20990.html</url>
+      
+        <content type="html"><![CDATA[<p>游记很随意，眼界才自由！</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 游记·Tour </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 游记 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
