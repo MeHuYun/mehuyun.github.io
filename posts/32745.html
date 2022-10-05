@@ -1,0 +1,904 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>Markdown Syntax | 囫囩</title><meta name="keywords" content="Markdown"><meta name="author" content="HuYun"><meta name="copyright" content="HuYun"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Markdown 语法大全超级归纳！">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Markdown Syntax">
+<meta property="og:url" content="https://www.huyun.me/posts/32745.html">
+<meta property="og:site_name" content="囫囩">
+<meta property="og:description" content="Markdown 语法大全超级归纳！">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://www.huyun.me/asset/cove/09.jpg">
+<meta property="article:published_time" content="2018-08-30T00:18:28.000Z">
+<meta property="article:modified_time" content="2018-08-30T00:18:32.000Z">
+<meta property="article:author" content="HuYun">
+<meta property="article:tag" content="Markdown">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.huyun.me/asset/cove/09.jpg"><link rel="shortcut icon" href="/asset/favicon.png"><link rel="canonical" href="https://www.huyun.me/posts/32745"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?3c47bcb6f7a7d882834358f147215231";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=GTM-TJQVR2G"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'GTM-TJQVR2G');
+</script><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Markdown Syntax',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: true,
+  isToc: true,
+  postUpdate: '2018-08-30 08:18:32'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="囫囩" type="application/atom+xml">
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/asset/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">9</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fa-fw fas fa-list"></i><span> 目录</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 歪轴</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fa-fw fas fa-list"></i><span> 分类</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/live/"><i class="fa-fw fas fa-life-ring"></i><span> 生活</span></a></li><li><a class="site-page child" href="/categories/tour/"><i class="fa-fw fas fa-luggage-cart"></i><span> 游记</span></a></li><li><a class="site-page child" href="/categories/code/"><i class="fa-fw fas fa-code"></i><span> 代码</span></a></li><li><a class="site-page child" href="/categories/share/"><i class="fa-fw fas fa-share-alt"></i><span> 分享</span></a></li><li><a class="site-page child" href="/categories/zhongyi/"><i class="fa-fw fas fa-pagelines"></i><span> 中医</span></a></li><li><a class="site-page child" href="/categories/farming/"><i class="fa-fw fas fa-tractor"></i><span> 农艺</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fa-fw fas fa-list"></i><span> 见闻</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/books/"><i class="fa-fw fas fa-book"></i><span> 书籍</span></a></li><li><a class="site-page child" href="/games/"><i class="fa-fw fas fa-gamepad"></i><span> 游戏</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li><li><a class="site-page child" href="/gallery/"><i class="fa-fw fas fa-images"></i><span> 图库</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-medal"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/asset/cove/09.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">囫囩</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fa-fw fas fa-list"></i><span> 目录</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 歪轴</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fa-fw fas fa-list"></i><span> 分类</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/live/"><i class="fa-fw fas fa-life-ring"></i><span> 生活</span></a></li><li><a class="site-page child" href="/categories/tour/"><i class="fa-fw fas fa-luggage-cart"></i><span> 游记</span></a></li><li><a class="site-page child" href="/categories/code/"><i class="fa-fw fas fa-code"></i><span> 代码</span></a></li><li><a class="site-page child" href="/categories/share/"><i class="fa-fw fas fa-share-alt"></i><span> 分享</span></a></li><li><a class="site-page child" href="/categories/zhongyi/"><i class="fa-fw fas fa-pagelines"></i><span> 中医</span></a></li><li><a class="site-page child" href="/categories/farming/"><i class="fa-fw fas fa-tractor"></i><span> 农艺</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fa-fw fas fa-list"></i><span> 见闻</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/books/"><i class="fa-fw fas fa-book"></i><span> 书籍</span></a></li><li><a class="site-page child" href="/games/"><i class="fa-fw fas fa-gamepad"></i><span> 游戏</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li><li><a class="site-page child" href="/gallery/"><i class="fa-fw fas fa-images"></i><span> 图库</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-medal"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Markdown Syntax</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2018-08-30T00:18:28.000Z" title="发表于 2018-08-30 08:18:28">2018-08-30</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2018-08-30T00:18:32.000Z" title="更新于 2018-08-30 08:18:32">2018-08-30</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/code/">代码·Code</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">4.6k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>15分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Markdown Syntax"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span><span class="post-meta-separator">|</span><span class="post-meta-commentcount"><i class="far fa-comments fa-fw post-meta-icon"></i><span class="post-meta-label">评论数:</span><a href="/posts/32745.html#post-comment"><span class="waline-comment-count" data-path="/posts/32745.html"><i class="fa-solid fa-spinner fa-spin"></i></span></a></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="一、Markdown-概述"><a href="#一、Markdown-概述" class="headerlink" title="一、Markdown 概述"></a>一、Markdown 概述</h2><h3 id="设计理念"><a href="#设计理念" class="headerlink" title="设计理念"></a>设计理念</h3><p>Markdown 易于阅读，方便创作 Web 文档，利于各平台无缝分发。<br>Markdown 语法灵感最大的来源还是纯文本 email 的格式，完全由标点符号标签组成的纯文本。<br>Markdown 文件应该以纯文本形式原样发布，不应该包含标记标签和格式化指令。</p>
+<h3 id="内联-HTML-语法"><a href="#内联-HTML-语法" class="headerlink" title="内联 HTML 语法"></a>内联 HTML 语法</h3><p>HTML 是一种发布格式，Markdown 是一种创作格式。<br>Markdown 语法集合比较小，只是 HTML 标签的一小部分。<br>对于 Markdown 中未包含的标签, 可以直接使用 HTML 标签，例如用 HTML <code>&lt;a&gt;</code> 标签替代 Markdown 的链接语法。</p>
+<h3 id="特殊字符自动转义"><a href="#特殊字符自动转义" class="headerlink" title="特殊字符自动转义"></a>特殊字符自动转义</h3><ul>
+<li>在 HTML 中, 有两个字符需要特殊对待: &lt; 和 &amp;，左尖括号用于起始标签。果你想将它们用作字面量, 你必须将它们转义为字符实体, 例如 &lt; 和 &amp; 左尖括号用于起始标签。果你想将它们用作字面量</li>
+</ul>
+<h2 id="二、语法分类"><a href="#二、语法分类" class="headerlink" title="二、语法分类"></a>二、语法分类</h2><p>1.基础语法 (Basic Syntax)：由 John Gruber 所定义的语法<br>2.扩展语法 (Extended Syntax)：由第三方定义，且被大多数编辑器所引入的语法<br>3.方言：仅在特定软件中生效的语法</p>
+<ul>
+<li>因为现在常用的编辑器都支持了扩展语法 (特别是 GitHub 定义的 GFM)，所以真正需要区分的只有少部分方言</li>
+<li>后文也不再对基础语法和扩展语法进行区分</li>
+<li>由于我自己主要就用那么一两个软件，方言这块知道的不多，见谅</li>
+<li>建议尽可能不使用方言，要考虑文档迁移时的兼容性</li>
+</ul>
+<h3 id="元素分类"><a href="#元素分类" class="headerlink" title="元素分类"></a>元素分类</h3><p>元素：组成文章的各个部分，包括语法符号和文字内容</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">1.块级元素 (Blocks)</span><br><span class="line"></span><br><span class="line"><span class="bullet">*</span> 容器块 (Container blocks)</span><br><span class="line"><span class="bullet">    *</span> 引用 (block quotes)</span><br><span class="line"><span class="bullet">    *</span> 列表 (list)</span><br><span class="line"><span class="bullet">        *</span> 有序列表 (unordered list, ul)</span><br><span class="line"><span class="bullet">        *</span> 无序列表 (ordered list, ol)</span><br><span class="line"><span class="bullet">        *</span> 任务列表 (task list, to do list, 扩展语法)</span><br><span class="line"><span class="bullet">*</span> 子叶块 (Leaf blocks)</span><br><span class="line"><span class="bullet">    *</span> 分割线 (thematic breaks)</span><br><span class="line"><span class="bullet">    *</span> 标题 (heading)</span><br><span class="line"><span class="bullet">        *</span> ATX heading</span><br><span class="line"><span class="bullet">        *</span> Setext heading</span><br><span class="line"><span class="bullet">        *</span> TOC (目录，属于方言)</span><br><span class="line"><span class="bullet">    *</span> 代码块 (code bolcks)</span><br><span class="line"><span class="bullet">        *</span> Indented</span><br><span class="line"><span class="bullet">        *</span> Fenced</span><br><span class="line"><span class="bullet">            *</span> 语法高亮 (highlight)</span><br><span class="line"><span class="bullet">            *</span> 画流程图，时序图等 (可能需要插件)</span><br><span class="line"><span class="bullet">    *</span> 表格 (tables，部分属于扩展语法)</span><br><span class="line"><span class="bullet">    *</span> HTML 块 (HTML blocks)</span><br><span class="line"><span class="bullet">    *</span> LaTeX 数学公式 (<span class="code">`$公式$`</span> 可能需要插件)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">2.行级元素 (Inlines)</span><br><span class="line"></span><br><span class="line"><span class="bullet">*</span> 逃逸 / 转义字符 (backslash escapes)</span><br><span class="line"><span class="bullet">*</span> 行内代码 / 代码区 (code spans)</span><br><span class="line"><span class="bullet">*</span> 严格换行 (line breaks)</span><br><span class="line"><span class="bullet">*</span> 字体效果</span><br><span class="line"><span class="bullet">    *</span> 斜体 (emphasis)</span><br><span class="line"><span class="bullet">    *</span> 粗体 (strong)</span><br><span class="line"><span class="bullet">    *</span> 粗斜体 (strong emphasis)</span><br><span class="line"><span class="bullet">    *</span> 删除线 (strikethrough，扩展语法)</span><br><span class="line"><span class="bullet">    *</span> 下划线 (md 没有，用 html)</span><br><span class="line"><span class="bullet">    *</span> 键盘文本 (md 没有，用 html)</span><br><span class="line"><span class="bullet">    *</span> 居中 (md 没有，用 html)</span><br><span class="line"><span class="bullet">    *</span> 高亮强调 (属于方言)</span><br><span class="line"><span class="bullet">*</span> HTML 实体字符</span><br><span class="line"><span class="bullet">*</span> LaTeX 数学公式 (<span class="code">`$公式$`</span> 可能需要插件)</span><br><span class="line"><span class="bullet">*</span> emoji 表情 (可能需要插件)</span><br><span class="line"><span class="bullet">*</span> 链接 (links)</span><br><span class="line"><span class="bullet">*</span> 图片 (images)</span><br><span class="line"><span class="bullet">*</span> 音频 (用 html)</span><br><span class="line"><span class="bullet">*</span> 视频 (用 html)</span><br><span class="line"><span class="bullet">*</span> 角标注释 (扩展语法)</span><br><span class="line"><span class="bullet">*</span> 标题 ID 及跳转 (扩展语法)</span><br></pre></td></tr></table></figure>
+
+<h3 id="优先级"><a href="#优先级" class="headerlink" title="优先级"></a>优先级</h3><blockquote>
+<p>容器块 &gt; 子叶块 &gt; 行级元素</p>
+</blockquote>
+<ul>
+<li>这是元素分类的依据</li>
+<li>容器块可包含所有类型的元素<ul>
+<li>于容器块，列表和引用可以多级嵌套，列表里面可以套引用，引用里面也可以有列表</li>
+<li>于子叶块，可以在引用里加表格，在列表里放代码块</li>
+</ul>
+</li>
+<li>子叶块不可以包含块级元素，比如标题里面可以放链接，但不可以放列表</li>
+<li>块级元素里可以放行级元素，比如在表格里加粗某几个字，但这并不是绝对的，比如在代码块中和 HTML 块中的 md 语法会失效</li>
+</ul>
+<h3 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h3><p>如上可以看出，Markdown 的文本里可以放置 HTML 和 LaTeX 的语法，这是其他语法手册杂糅现象的重灾区。在 Obsidian 中可以直接使用部分非 md 的语法，但在 hexo 中则大多需要添加插件，如 MathJax (渲染 LaTeX)、Mermaid (画功能图)。具体应用具体场景具体分析，本文的重点在于 md 的语法，不涉及插件的安装等琐细事情</p>
+<h3 id="Markdown-与-HTML"><a href="#Markdown-与-HTML" class="headerlink" title="Markdown 与 HTML"></a>Markdown 与 HTML</h3><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.markdownguide.org/getting-started/#how-does-it-work">https://www.markdownguide.org/getting-started/#how-does-it-work</a></p>
+<ul>
+<li>无论是 md 语法，LaTeX 公式还是各类图的语法，都会最终被解释成 HTML 格式</li>
+<li>md 文件可以渲染成静态页面 (用于博客)，也可以导出为 PDF，甚至是 PPT</li>
+<li>md 与 HTML 的定位不同，前者用于书写，其源文件就足够可读，后者则用于发表</li>
+</ul>
+<h2 id="三、容器块：引用，列表"><a href="#三、容器块：引用，列表" class="headerlink" title="三、容器块：引用，列表"></a>三、容器块：引用，列表</h2><h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="quote">&gt; 语法：大于号的后面加个空格</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>语法：大于号的后面加个空格</p>
+</blockquote>
+<h4 id="多行"><a href="#多行" class="headerlink" title="多行"></a>多行</h4><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="quote">&gt; 多行</span></span><br><span class="line"><span class="quote">&gt; 引用</span></span><br><span class="line"></span><br><span class="line">中间断开视为多个引用</span><br><span class="line"></span><br><span class="line"><span class="quote">&gt; 段内换行时 </span></span><br><span class="line"><span class="quote">&gt; </span></span><br><span class="line"><span class="quote">&gt; 加一行空白引用即可</span></span><br><span class="line"></span><br><span class="line"><span class="quote">&gt; 或者</span></span><br><span class="line">偷懒</span><br><span class="line"><span class="quote">&gt; </span></span><br><span class="line"><span class="quote">&gt; 换行同上</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>多行<br>引用</p>
+</blockquote>
+<p>中间断开视为多个引用</p>
+<blockquote>
+<p>段内换行时</p>
+<p>加一行空白引用即可</p>
+</blockquote>
+<blockquote>
+<p>或者<br>偷懒</p>
+<p>换行同上</p>
+</blockquote>
+<h4 id="多重"><a href="#多重" class="headerlink" title="多重"></a>多重</h4><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="quote">&gt; 多重</span></span><br><span class="line"><span class="quote">&gt; &gt; 引用</span></span><br><span class="line"><span class="quote">&gt; &gt;</span></span><br><span class="line"><span class="quote">&gt; &gt; &gt; 套娃</span></span><br><span class="line"><span class="quote">&gt; &gt;</span></span><br><span class="line"><span class="quote">&gt;</span></span><br><span class="line"><span class="quote">&gt; &gt; 需要在两层之间</span></span><br><span class="line"><span class="quote">&gt; 多加一行空白</span></span><br><span class="line"><span class="quote">&gt;</span></span><br><span class="line"><span class="quote">&gt; 才能结束套娃</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>多重</p>
+<blockquote>
+<p>引用</p>
+<blockquote>
+<p>套娃</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>需要在两层之间<br>多加一行空白</p>
+</blockquote>
+<p>才能结束套娃</p>
+</blockquote>
+<h4 id="嵌套"><a href="#嵌套" class="headerlink" title="嵌套"></a>嵌套</h4><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="quote">&gt; <span class="emphasis">* 嵌套列表时 </span></span></span><br><span class="line"><span class="emphasis"><span class="quote">*</span> 可能会  </span></span><br><span class="line"><span class="bullet">*</span> 偷不了懒</span><br><span class="line"></span><br><span class="line"><span class="quote">&gt; <span class="emphasis">* 还是得</span></span></span><br><span class="line"><span class="emphasis"><span class="quote">&gt; *</span> 写全语法</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<ul>
+<li>嵌套列表时</li>
+</ul>
+</blockquote>
+<ul>
+<li>可能会  </li>
+<li>偷不了懒</li>
+</ul>
+<blockquote>
+<ul>
+<li>还是得</li>
+<li>写全语法</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>建议：不用偷懒的写法，多打几个符号而已</p>
+</blockquote>
+<h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><h4 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h4><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">语法：<span class="emphasis">* + - 后加空格</span></span><br><span class="line"><span class="emphasis">渲染后的效果是相同</span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis">*</span> a</span><br><span class="line"><span class="bullet">*</span> b</span><br><span class="line"></span><br><span class="line"><span class="bullet">+</span> a</span><br><span class="line"><span class="bullet">+</span> b</span><br><span class="line"></span><br><span class="line"><span class="bullet">-</span> a</span><br><span class="line"><span class="bullet">-</span> b</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>a</li>
+<li>b</li>
+</ul>
+<ul>
+<li>a</li>
+<li>b</li>
+</ul>
+<ul>
+<li>a</li>
+<li>b</li>
+</ul>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">+</span> 嵌套列表时</span><br><span class="line"><span class="bullet">  -</span> 子层前加两三个空格缩进即可</span><br><span class="line"><span class="bullet">  -</span> 要回到上级列表则去掉空格</span><br><span class="line"><span class="bullet">+</span> 也就是这样</span><br><span class="line"><span class="bullet">+</span> 列表同引用</span><br><span class="line"><span class="bullet">  -</span> 可以</span><br><span class="line"><span class="bullet">    *</span> 多重</span><br><span class="line"><span class="bullet">      +</span> 嵌套</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>嵌套列表时<ul>
+<li>子层前加两三个空格缩进即可</li>
+<li>要回到上级列表则去掉空格</li>
+</ul>
+</li>
+<li>也就是这样</li>
+<li>列表同引用<ul>
+<li>可以<ul>
+<li>多重<ul>
+<li>嵌套</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>md 有多个无序列表符具有明显的好<br>在同层级的列表项前用统一的符号<br>在嵌套里用不同的符<br>即增加了可读性，也使得渲染不易出错</p>
+</blockquote>
+<h4 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h4><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">语法：数字+句号+空格</span><br><span class="line"><span class="bullet">1.</span> 第一项</span><br><span class="line"><span class="bullet">2.</span> 第二项</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>第一项</li>
+<li>第二项</li>
+</ol>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">*</span> 无序列表</span><br><span class="line"><span class="bullet">  1.</span> 和有序列表间</span><br><span class="line"><span class="bullet">  2.</span> 可相互嵌套</span><br><span class="line"><span class="bullet">     -</span> 效果如下 </span><br><span class="line"><span class="bullet">     -</span> &gt; 还有引用</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>无序列表<ol>
+<li>和有序列表间</li>
+<li>可相互嵌套<ul>
+<li>效果如下</li>
+<li><blockquote>
+<p>还有引用</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">100.</span> 列表的第一项可以是任意自然数</span><br><span class="line"><span class="bullet">01.</span> 不考虑那该死的溢出</span><br><span class="line"><span class="bullet">123.</span> 后面的数字会自动顺延</span><br><span class="line"><span class="bullet">103.</span> 所以第一项的序数很重要</span><br><span class="line"></span><br><span class="line"><span class="bullet">0.</span> 以0为起始也是可以的</span><br><span class="line"></span><br><span class="line">-1. 但是负数不行，减号会渲染失</span><br><span class="line">1/2. 分数也不行，因为有个斜杠</span><br><span class="line"></span><br><span class="line">10) 还有这种写法<span class="code">`10)`</span>，但是不推荐</span><br><span class="line">11) 属于Typora支持的方言</span><br><span class="line">12) 且括号本身是个容易导致渲染出错的危险符号</span><br></pre></td></tr></table></figure>
+
+<ol start="100">
+<li><p>列表的第一项可以是任意自然数</p>
+</li>
+<li><p>不考虑那该死的溢出</p>
+</li>
+<li><p>后面的数字会自动顺延</p>
+</li>
+<li><p>所以第一项的序数很重要</p>
+</li>
+<li><p>以0为起始也是可以的</p>
+</li>
+</ol>
+<p>-1. 但是负数不行，减号会渲染失败<br>1&#x2F;2. 分数也不行，因为有个斜杠</p>
+<p>10). 还有这种写法<code>10)</code>，但是不推荐<br>11). 属于 Typora 支持的方言<br>12). 且括号本身是个容易导致渲染出错的危险符号</p>
+<blockquote>
+<p>尽量以 1 为起始，顺延的数字也按顺序填正确；不使用方言写法</p>
+</blockquote>
+<h4 id="任务列表"><a href="#任务列表" class="headerlink" title="任务列表"></a>任务列表</h4><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> [ ] 减号+空格+方括号+空格</span><br><span class="line"><span class="bullet">-</span> [x] 方括号里，空格为未填充，x为已填充</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><input disabled="" type="checkbox"> 减号+空格+方括号+空格</li>
+<li><input checked="" disabled="" type="checkbox"> 方括号里，空格为未填充，x为已填充</li>
+</ul>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">任务列表的嵌套同上</span><br><span class="line"><span class="bullet">  -</span> [ ] &gt; to do</span><br><span class="line"><span class="bullet">  -</span> [x] have done</span><br></pre></td></tr></table></figure>
+
+<p>任务列表的嵌套同上</p>
+<ul>
+<li><input disabled="" type="checkbox"> <blockquote>
+<p>to do</p>
+</blockquote>
+</li>
+<li><input checked="" disabled="" type="checkbox"> have done</li>
+</ul>
+<h2 id="四、子叶块：分割线、标题、代码块、功能图、表格"><a href="#四、子叶块：分割线、标题、代码块、功能图、表格" class="headerlink" title="四、子叶块：分割线、标题、代码块、功能图、表格"></a>四、子叶块：分割线、标题、代码块、功能图、表格</h2><h3 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">语法：3个或以上的&quot;<span class="emphasis">_&quot;,&quot;-&quot;,&quot;*&quot;单独成行</span></span><br><span class="line"><span class="emphasis"><span class="strong">___</span></span></span><br><span class="line"><span class="strong"><span class="emphasis">---</span></span></span><br><span class="line"><span class="strong"><span class="emphasis">***</span></span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<hr>
+<hr>
+<h3 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h3><ul>
+<li>ATX</li>
+</ul>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">|Markdown|渲染效果|</span><br><span class="line">|:--|:--|</span><br><span class="line">|# H1|<span class="language-xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span></span>这是一级标题<span class="language-xml"><span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span>|</span><br><span class="line">|## H2|<span class="language-xml"><span class="tag">&lt;<span class="name">h2</span>&gt;</span></span>切记#后面要有空格<span class="language-xml"><span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span>|</span><br><span class="line">|### H3 ##|<span class="language-xml"><span class="tag">&lt;<span class="name">h3</span>&gt;</span></span>标题后的#会被隐藏<span class="language-xml"><span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span>|</span><br><span class="line">|###### H6|<span class="language-xml"><span class="tag">&lt;<span class="name">h6</span>&gt;</span></span>最多支持六级标题<span class="language-xml"><span class="tag">&lt;/<span class="name">h6</span>&gt;</span></span>|</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="left">Markdown</th>
+<th align="left">渲染效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"># H1</td>
+<td align="left"><h1>这是一级标题</h1></td>
+</tr>
+<tr>
+<td align="left">## H2</td>
+<td align="left"><h2>切记#后面要有空格</h2></td>
+</tr>
+<tr>
+<td align="left">### H3 ##</td>
+<td align="left"><h3>标题后的#会被隐藏</h3></td>
+</tr>
+<tr>
+<td align="left">###### H6</td>
+<td align="left"><h6>最多支持六级标题</h6></td>
+</tr>
+</tbody></table>
+<ul>
+<li>Setext</li>
+</ul>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">|Markdown|渲染效果|</span><br><span class="line">|:--|:--|</span><br><span class="line">|H1<span class="language-xml"><span class="tag">&lt;<span class="name">br</span>&gt;</span></span>\=|<span class="language-xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span></span>紧跟一行1个或以上的等号<span class="language-xml"><span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span>|</span><br><span class="line">|H2<span class="language-xml"><span class="tag">&lt;<span class="name">br</span>&gt;</span></span>\-|<span class="language-xml"><span class="tag">&lt;<span class="name">h2</span>&gt;</span></span>用减号，最多支持二级标题<span class="language-xml"><span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span>|</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="left">Markdown</th>
+<th align="left">渲染效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">H1<br>=</td>
+<td align="left"><h1>紧跟一行1个或以上的等号</h1></td>
+</tr>
+<tr>
+<td align="left">H2<br>-</td>
+<td align="left"><h2>用减号，最多支持二级标题</h2></td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>建议：用 ATX 格式的标题<br>首先是它支持到了 H6，而 Setext 仅支持到 H2，一般是不够用的<br>其次是 Setext 中，另起一行紧跟 — 是 H2，不紧跟就成了下划线，容易出错</p>
+</blockquote>
+<h3 id="目录-方言"><a href="#目录-方言" class="headerlink" title="目录(方言)"></a>目录(方言)</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">语法：[TOC]，某些解析支持用它将目录自动列出来  </span><br></pre></td></tr></table></figure>
+
+<h3 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h3><blockquote>
+<p>在代码块中，所有语法都不会被渲染，它会展现出最原本的形式</p>
+</blockquote>
+<ul>
+<li>Indented</li>
+</ul>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">缩进形式的代码块，在最左边打四个空格</span><br><span class="line"><span class="code">    #include&lt;stdio.h&gt;</span></span><br><span class="line"><span class="code">    int main() &#123;</span></span><br><span class="line"><span class="code">        printf(&quot;Hello World !&quot;);</span></span><br><span class="line"><span class="code">	    return 0;</span></span><br><span class="line"><span class="code">	&#125;</span></span><br></pre></td></tr></table></figure>
+
+<pre><code>#include&lt;stdio.h&gt;
+int main() &#123;
+    printf(&quot;Hello World !&quot;);
+    return 0;
+&#125;
+</code></pre>
+<ul>
+<li>Fenced</li>
+</ul>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">围栏形式的代码块，在上下各起一行打3个`或者~</span><br><span class="line"><span class="code">	```c</span></span><br><span class="line"><span class="code">	#include&lt;stdio.h&gt;</span></span><br><span class="line"><span class="code">	int main() &#123;</span></span><br><span class="line"><span class="code">	    printf(&quot;Hello World !&quot;);</span></span><br><span class="line"><span class="code">	    return 0;</span></span><br><span class="line"><span class="code">	&#125;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">```c</span><br><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">int main() &#123;</span><br><span class="line">    printf(&quot;```&quot;);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>语法高亮</li>
+</ul>
+<p>这是 Fenced 形式的代码块独有的功能，如上，<code>c</code> 可换成 <code>html</code>、<code>java</code> 等<br>如无需高亮，或语言不被支持 (如 <code>AT&amp;T</code> 格式的汇编)，可不填或者填 <code>none</code>、<code>txt</code></p>
+<ul>
+<li>功能图</li>
+</ul>
+<p>这又是 Fenced 形式的代码块独有的功能，如若把上例的 <code>c</code> 换成 <code>mermaid</code> ，则可用 mermaid 的语法画流程图，换成 <code>seq</code> 可以画序列图。这里涉及到了其他语法，不拓展</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="code">```mermaid</span></span><br><span class="line"><span class="code">graph TD;</span></span><br><span class="line"><span class="code">A((1));B((2));C((3));</span></span><br><span class="line"><span class="code">A--&gt;B;A--&gt;C;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">```mermaid</span><br><span class="line">graph TD;</span><br><span class="line">A((1));B((2));C((3));</span><br><span class="line">A--&gt;B;A--&gt;C;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p> 建议</p>
+</blockquote>
+<blockquote>
+<ul>
+<li>4 空格缩进式的代码块 (indented) 也有其优点，如在一些主题下没有代码框，更简洁</li>
+<li>尽量用 &#96; 号而不用～号，也尽量不要嵌套代码块，因为后者可能和行级元素的删除线冲突</li>
+<li>留意：md 不支持 tab 键，tab 会被解释成 1 个空格，所以在打代码时要将 tab 转化为 4 个空格 (Obsidian 中可以开启设置自动转化)，或者在主题样式 (如 <code>styles.styl</code>) 中自定义 <code>pre &#123;tab-size: 4;&#125;</code></li>
+<li>如果会用画图的语法，那可太好了，比起用其他软件生成图片后再插入到文档中，方便非常多，文件更小，可迁移性也更高</li>
+</ul>
+</blockquote>
+<h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><h4 id="一般简单表格"><a href="#一般简单表格" class="headerlink" title="一般简单表格"></a>一般简单表格</h4><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">这是最简单的表格  </span><br><span class="line"></span><br><span class="line">|表头|最上面的字体|会稍微有点不一样|</span><br><span class="line">|--|--|---|</span><br><span class="line">|最上面那行确定了列数|中间的减号个数不限|表身多余的竖线会被无视||</span><br><span class="line">|最左边的行数|确定了整个表的行数|</span><br><span class="line">|表格会被自动补全|</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>表头</th>
+<th>最上面的字体</th>
+<th>会稍微有点不一样</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>最上面那行确定了列数</td>
+<td>中间的减号个数不限</td>
+<td>表身多余的竖线会被无视</td>
+</tr>
+<tr>
+<td>最左边的行数</td>
+<td>确定了整个表的行数</td>
+<td></td>
+</tr>
+<tr>
+<td>表格会被自动补全</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">这是控制了各列内容对齐方式的表格  </span><br><span class="line"></span><br><span class="line">|默认|左对齐|居中|右对齐|</span><br><span class="line">|--|:--|:--:|--:|</span><br><span class="line">|仅有减号|冒号在左边|冒号在两边|冒号在右边|</span><br><span class="line">|A|B|C|D|</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>默认</th>
+<th align="left">左对齐</th>
+<th align="center">居中</th>
+<th align="right">右对齐</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>仅有减号</td>
+<td align="left">冒号在左边</td>
+<td align="center">冒号在两边</td>
+<td align="right">冒号在右边</td>
+</tr>
+<tr>
+<td>A</td>
+<td align="left">B</td>
+<td align="center">C</td>
+<td align="right">D</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>这是 md 语法唯一能支持的表格形式，方便但有限<br>更复杂的，比如合并某些框框，将表头设置在左侧，就得通过其他的手段来实现了<br>各个表格的宽度是以各列中最长的那个为准的，竖线不需要手动对齐；如果有闲情，还是对齐为好，为了 md 源文件的可读性</p>
+</blockquote>
+<h4 id="更复杂的表格"><a href="#更复杂的表格" class="headerlink" title="更复杂的表格"></a>更复杂的表格</h4><p>前文提到，md 最终会被解释成 html，所以可以直接在 md 文件中添加 html 的语句，同样，借助软件或插件，也可以添加 LaTeX 的部分语句</p>
+<p>可以看看<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.tablesgenerator.com/latex_tables">这个网站</a>，用 HTML 或者 LaTeX 定制表格，不多介绍。若还是不合心意，可用其他软件生成后，导出为图片，再插入到 md 中</p>
+<h4 id="关于-LaTeX"><a href="#关于-LaTeX" class="headerlink" title="关于 LaTeX"></a>关于 LaTeX</h4><p>四个 <code>$</code> 之间添加的是 LaTeX 的公式，它会自动单独成段，居中对齐</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$$\begin&#123;split&#125;H<span class="emphasis">_n</span></span><br><span class="line"><span class="emphasis">&amp;= 1+\dfrac&#123;1&#125;&#123;2&#125;+\dfrac&#123;1&#125;&#123;3&#125;+\dfrac&#123;1&#125;&#123;4&#125;+\cdots+\dfrac&#123;1&#125;&#123;n&#125;\\</span></span><br><span class="line"><span class="emphasis">&amp;= \sum_</span>&#123;k=1&#125;^&#123;n&#125;\dfrac&#123;1&#125;&#123;k&#125;\\</span><br><span class="line">&amp;= \ln&#123;n&#125;+O(1)</span><br><span class="line">\end&#123;split&#125;$$</span><br></pre></td></tr></table></figure>
+
+<p>$$\begin{split}H_n<br>&amp;&#x3D; 1+\dfrac{1}{2}+\dfrac{1}{3}+\dfrac{1}{4}+\cdots+\dfrac{1}{n}\<br>&amp;&#x3D; \sum_{k&#x3D;1}^{n}\dfrac{1}{k}\<br>&amp;&#x3D; \ln{n}+O(1)<br>\end{split}$$</p>
+<p>两个 <code>$</code> 之间的属于行级元素</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">即可以放在行内的式子，如$a^2+b^2$=$c^2$</span><br></pre></td></tr></table></figure>
+
+<p>即可以放在行内的式子，如$a^2+b^2$&#x3D;$c^2$</p>
+<h4 id="关于-HTML"><a href="#关于-HTML" class="headerlink" title="关于 HTML"></a>关于 HTML</h4><p>一般来说，如 <code>&lt;code&gt;</code> 等带尖括号的标签，和带 <code>&amp;;</code> 的实体符号，属于 html</p>
+<h2 id="五、行级：转义字符、行内代码、换行、字体、表情、公式"><a href="#五、行级：转义字符、行内代码、换行、字体、表情、公式" class="headerlink" title="五、行级：转义字符、行内代码、换行、字体、表情、公式"></a>五、行级：转义字符、行内代码、换行、字体、表情、公式</h2><h3 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h3><blockquote>
+<p>语法：\，反斜杠 + 要转义的字符</p>
+</blockquote>
+<p>转义字符可太常用了<br>如果想打 *，则需要 <code>\*</code>，以防渲染出错<br>如果在表格中需要用到 |，则可以 <code>\|</code></p>
+<h3 id="行内代码"><a href="#行内代码" class="headerlink" title="行内代码"></a>行内代码</h3><table>
+<thead>
+<tr>
+<th align="center">语法</th>
+<th align="center">markdown</th>
+<th align="center">渲染效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">两个重音符 &#39;</td>
+<td align="center">`code` or `word`</td>
+<td align="center">code or word</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>没有代码高亮，可以单纯地用它来强调某个词</p>
+</blockquote>
+<h3 id="换行"><a href="#换行" class="headerlink" title="换行"></a>换行</h3><p>Markdown 源文本的行数和渲染后的页面所显示的行数往往是不一样的，这里就涉及到了换行的问题</p>
+<h4 id="段内换行"><a href="#段内换行" class="headerlink" title="段内换行"></a>段内换行</h4><ul>
+<li>若在源文本的文字末尾直接回车，仅是在 md 文件中换行，而渲染后的页面中不是显示换行，而是显示 1 个空格</li>
+<li>若在文字末尾 + 两个空格 + 回车，即软换行，在渲染后的页面中成功换行</li>
+<li>若在文字中任意位置 + <code>&lt;br&gt;</code>，即硬换行，在渲染后的页面中强行换行，虽然这在 md 中可读性不够，但是在有些时候，能出奇效，比如在标题中，可用它创造出占多行的标题：<code>## H2&#39;s line1&lt;br&gt;and line2</code></li>
+</ul>
+<h3 id="起新段落"><a href="#起新段落" class="headerlink" title="起新段落"></a>起新段落</h3><ul>
+<li>在 md 源文行末，若是单个回车，则在渲染后的页面中，视为空格；连续回车 (3 个及以上)，则在渲染后的页面中，另起一段，但仅是显示一行空行</li>
+<li>在分割线处会强制分段</li>
+</ul>
+<h3 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h3><table>
+<thead>
+<tr>
+<th align="center">字体</th>
+<th align="center">markdown</th>
+<th align="center">渲染效果</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">斜体</td>
+<td align="center">*两个符号之间*</td>
+<td align="center"><em>两个符号之间</em></td>
+<td align="center">虽然用 _ 也是一样的，但建议用 *，用 _ 时文本左右需要有空格，容错空间较小</td>
+</tr>
+<tr>
+<td align="center">粗体</td>
+<td align="center">**四个符号之间**</td>
+<td align="center"><strong>四个符号之间</strong></td>
+<td align="center">同上</td>
+</tr>
+<tr>
+<td align="center">粗斜体</td>
+<td align="center">***六个符号之间***</td>
+<td align="center"><em><strong>六个符号之间</strong></em></td>
+<td align="center">可将 * 和 _ 配对混用，但是没有必要</td>
+</tr>
+<tr>
+<td align="center">删除线</td>
+<td align="center">~~四个波浪线之间~~</td>
+<td align="center"><del>四个波浪线之间</del></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">下划线</td>
+<td align="center">&lt;u&gt;这里有个下划线&lt;/u&gt;</td>
+<td align="center"><u>这里有个下划线</u></td>
+<td align="center">md 没有对应语法，用的 html</td>
+</tr>
+<tr>
+<td align="center">键盘文本</td>
+<td align="center">&lt;kbd&gt;模拟键帽&lt;/kbd&gt;</td>
+<td align="center"><kbd>模拟键帽</kbd></td>
+<td align="center">同上</td>
+</tr>
+<tr>
+<td align="center">高亮强调</td>
+<td align="center">==四个等号之间==</td>
+<td align="center">&#x3D;&#x3D;四个等号之间&#x3D;&#x3D;</td>
+<td align="center">Obsidian 支持的方言写法</td>
+</tr>
+<tr>
+<td align="center">居中对齐</td>
+<td align="center">&lt;center&gt;这几个字被居中了&lt;/center&gt;</td>
+<td align="center"><center>这几个字被居中了</center></td>
+<td align="center">的 html，标题、图片等适用</td>
+</tr>
+</tbody></table>
+<h3 id="HTML-实体字符和-LaTeX-行内公式"><a href="#HTML-实体字符和-LaTeX-行内公式" class="headerlink" title="HTML 实体字符和 LaTeX 行内公式"></a>HTML 实体字符和 LaTeX 行内公式</h3><p>参照下列网站</p>
+<p>html: <a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.runoob.com/tags/html-symbols.html">HTML 符号实体参考手册 (runoob.com)</a><br>latex: <a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.latexlive.com/">在线编辑器 (latexlive.com)</a>，<a target="_blank" rel="noopener external nofollow noreferrer" href="https://kz16.top/latex/symbol/">latex 常用符号离线版 (kz16.top)</a></p>
+<p>其中 HTML 实体字符以 <code>&amp;;</code> 为标志，常用的有 <code>&amp;ensp;</code> 缩进 1&#x2F;2 个中文格，<code>&amp;emsp;</code> 缩进 1&#x2F;1 个中文格；而 LaTeX 公式以 <code>$公式$</code> 为标志</p>
+<p>两者都可以显示一些符号，也许是个好的装饰符，如 <code>$\spadesuit$ &amp;trade;</code>，(\spadesuit) ™</p>
+<h3 id="Emoji-表情"><a href="#Emoji-表情" class="headerlink" title="Emoji 表情"></a>Emoji 表情</h3><table>
+<thead>
+<tr>
+<th align="center">字体</th>
+<th align="center">markdown</th>
+<th align="center">渲染效果</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">两个冒号</td>
+<td align="center">:joy:</td>
+<td align="center">:joy:</td>
+<td align="center">需要软件支持，见<a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md#table-of-contents">这里</a></td>
+</tr>
+<tr>
+<td align="center">直接复制</td>
+<td align="center"></td>
+<td align="center">😀</td>
+<td align="center">需要软件支持，叫<a target="_blank" rel="noopener external nofollow noreferrer" href="https://emojipedia.org/">这里</a></td>
+</tr>
+<tr>
+<td align="center">内嵌图标</td>
+<td align="center">&lt;i class&#x3D;”icon-name”&gt;&lt;/i&gt;</td>
+<td align="center"></td>
+<td align="center">HTML</td>
+</tr>
+</tbody></table>
+<h2 id="六、行级：链接、图片、视频、角标、跳转"><a href="#六、行级：链接、图片、视频、角标、跳转" class="headerlink" title="六、行级：链接、图片、视频、角标、跳转"></a>六、行级：链接、图片、视频、角标、跳转</h2><h3 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h3><h4 id="内式-inline"><a href="#内式-inline" class="headerlink" title="内式 (inline)"></a>内式 (inline)</h4><table>
+<thead>
+<tr>
+<th align="center">markdown</th>
+<th align="center">渲染效果</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">[shown info](link)</td>
+<td align="center"><a href="link">shown info</a></td>
+<td align="center">这里的 link 可以是整个网址也可以是相对链接</td>
+</tr>
+<tr>
+<td align="center">[shown info](link “hidden info”)</td>
+<td align="center"><a href="link" title="hidden info">shown info</a></td>
+<td align="center">双引号中是 title，即鼠标悬停时能看到的字</td>
+</tr>
+<tr>
+<td align="center">\ <a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.doing.wang/">https://www.doing.wang\</a></td>
+<td align="center"><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.doing.wang/">https://www.doing.wang</a></td>
+<td align="center">自动链接，直接贴网址，并在两边各加个空格</td>
+</tr>
+<tr>
+<td align="center">&lt;<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.doing.wang/&gt;">https://www.doing.wang\&gt;</a></td>
+<td align="center"><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.doing.wang/">https://www.doing.wang</a></td>
+<td align="center">也可以用尖括号把链接括起来 (shown info &#x3D; link)</td>
+</tr>
+</tbody></table>
+<h4 id="参考式-reference"><a href="#参考式-reference" class="headerlink" title="参考式 (reference)"></a>参考式 (reference)</h4><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">语法：[<span class="string">shown info</span>][<span class="symbol">id</span>] or [shown info] [id]</span><br><span class="line">即是说，两者中间可以有空格</span><br><span class="line">在段尾或文章末尾写上 [id]: link &quot;hidden info&quot;</span><br><span class="line">链接也可以用尖括号括起来 <span class="language-xml"><span class="tag">&lt;<span class="name">link</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>id</code> 可以是数字字母和符号，包括空格，大小写不敏感</li>
+<li><code>id</code> 为空时，即方括号内连空格都没有时，<code>id = shown ifo</code></li>
+<li>不能套娃，[id][another id] 的写法是非法 (不被允许) 的</li>
+<li><code>id</code> 只以第一次被定义为准</li>
+</ul>
+<p>[例子][id]<br>这中间的 [例子] 都指向 link1<br>id: <link1><br>id: <link2><br>这中间的 [例子] 还是都指向 link1<br>id: <link3></p>
+<h4 id="HTML-格式"><a href="#HTML-格式" class="headerlink" title="HTML 格式"></a>HTML 格式</h4><p>|HTML|渲染效果|<br>|&lt;a href&#x3D;”link”&gt;shown info&lt;/a&gt;|<a href="link" >shown info</a>|<br>|&lt;a href&#x3D;”link” title&#x3D;”hidden info”&gt;shown info&lt;/a&gt;|</p>
+<blockquote>
+<p>建议：短的链接用行内式；长、且需要重复用到的链接，用参考式<br>参考式写起来不太方便，但它大大提高了 md 文本可读性和链接的复用性<br>HTML 格式可以自定义字体大小颜色位置等，但在链接上并不实用，不赘述<br>我自己很少写参考式，也不喜欢加 title<br>一般浏览器在鼠标悬停时，左下角会显示完整的链接</p>
+</blockquote>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://www.huyun.me">囫囩</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://www.huyun.me/posts/32745.html">https://www.huyun.me/posts/32745.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow noreferrer" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://www.huyun.me" target="_blank">囫囩</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Markdown/">Markdown</a></div><div class="post_share"><div class="social-share" data-image="/asset/cove/09.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/asset/reward/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/asset/reward/wechat.jpg" alt="微信码支付打赏"/></a><div class="post-qr-code-desc">微信码支付打赏</div></li><li class="reward-item"><a href="/asset/reward/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/asset/reward/alipay.jpg" alt="支付宝支付打赏"/></a><div class="post-qr-code-desc">支付宝支付打赏</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/33319.html"><img class="prev-cover" src="/asset/cove/07.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">折腾我的小栈</div></div></a></div><div class="next-post pull-right"><a href="/posts/4911.html"><img class="next-cover" src="/asset/cove/08.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">旅途计划</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div id="comment-switch"><span class="first-comment">Waline</span><span class="switch-btn"></span><span class="second-comment">Twikoo</span></div></div><div class="comment-wrap"><div><div id="waline-wrap"></div></div><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/asset/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">HuYun</div><div class="author-info__description">胡家山老匹夫的不落阁！</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">9</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><a id="card-info-btn" target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/MeHuYun"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/MeHuYun" rel="external nofollow noreferrer" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:admin@huyun.me" rel="external nofollow noreferrer" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">胡家山老匹夫的不落阁…<br />一个山野农夫的网络小栈…<br />驻扎着自己的快乐与春的梦……</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81Markdown-%E6%A6%82%E8%BF%B0"><span class="toc-text">一、Markdown 概述</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BE%E8%AE%A1%E7%90%86%E5%BF%B5"><span class="toc-text">设计理念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%85%E8%81%94-HTML-%E8%AF%AD%E6%B3%95"><span class="toc-text">内联 HTML 语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6%E8%87%AA%E5%8A%A8%E8%BD%AC%E4%B9%89"><span class="toc-text">特殊字符自动转义</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E8%AF%AD%E6%B3%95%E5%88%86%E7%B1%BB"><span class="toc-text">二、语法分类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%83%E7%B4%A0%E5%88%86%E7%B1%BB"><span class="toc-text">元素分类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BC%98%E5%85%88%E7%BA%A7"><span class="toc-text">优先级</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8F%92%E4%BB%B6"><span class="toc-text">插件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Markdown-%E4%B8%8E-HTML"><span class="toc-text">Markdown 与 HTML</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%AE%B9%E5%99%A8%E5%9D%97%EF%BC%9A%E5%BC%95%E7%94%A8%EF%BC%8C%E5%88%97%E8%A1%A8"><span class="toc-text">三、容器块：引用，列表</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%95%E7%94%A8"><span class="toc-text">引用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%9A%E8%A1%8C"><span class="toc-text">多行</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%9A%E9%87%8D"><span class="toc-text">多重</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B5%8C%E5%A5%97"><span class="toc-text">嵌套</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%97%E8%A1%A8"><span class="toc-text">列表</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8"><span class="toc-text">无序列表</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%89%E5%BA%8F%E5%88%97%E8%A1%A8"><span class="toc-text">有序列表</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E5%88%97%E8%A1%A8"><span class="toc-text">任务列表</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%AD%90%E5%8F%B6%E5%9D%97%EF%BC%9A%E5%88%86%E5%89%B2%E7%BA%BF%E3%80%81%E6%A0%87%E9%A2%98%E3%80%81%E4%BB%A3%E7%A0%81%E5%9D%97%E3%80%81%E5%8A%9F%E8%83%BD%E5%9B%BE%E3%80%81%E8%A1%A8%E6%A0%BC"><span class="toc-text">四、子叶块：分割线、标题、代码块、功能图、表格</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E5%89%B2%E7%BA%BF"><span class="toc-text">分割线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%87%E9%A2%98"><span class="toc-text">标题</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">这是一级标题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text">切记#后面要有空格</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-text">标题后的#会被隐藏</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link"><span class="toc-text">最多支持六级标题</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">紧跟一行1个或以上的等号</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text">用减号，最多支持二级标题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%AE%E5%BD%95-%E6%96%B9%E8%A8%80"><span class="toc-text">目录(方言)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E5%9D%97"><span class="toc-text">代码块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%A8%E6%A0%BC"><span class="toc-text">表格</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%80%E8%88%AC%E7%AE%80%E5%8D%95%E8%A1%A8%E6%A0%BC"><span class="toc-text">一般简单表格</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9B%B4%E5%A4%8D%E6%9D%82%E7%9A%84%E8%A1%A8%E6%A0%BC"><span class="toc-text">更复杂的表格</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E-LaTeX"><span class="toc-text">关于 LaTeX</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E-HTML"><span class="toc-text">关于 HTML</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E8%A1%8C%E7%BA%A7%EF%BC%9A%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6%E3%80%81%E8%A1%8C%E5%86%85%E4%BB%A3%E7%A0%81%E3%80%81%E6%8D%A2%E8%A1%8C%E3%80%81%E5%AD%97%E4%BD%93%E3%80%81%E8%A1%A8%E6%83%85%E3%80%81%E5%85%AC%E5%BC%8F"><span class="toc-text">五、行级：转义字符、行内代码、换行、字体、表情、公式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6"><span class="toc-text">转义字符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%8C%E5%86%85%E4%BB%A3%E7%A0%81"><span class="toc-text">行内代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8D%A2%E8%A1%8C"><span class="toc-text">换行</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%AE%B5%E5%86%85%E6%8D%A2%E8%A1%8C"><span class="toc-text">段内换行</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B5%B7%E6%96%B0%E6%AE%B5%E8%90%BD"><span class="toc-text">起新段落</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E4%BD%93"><span class="toc-text">字体</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML-%E5%AE%9E%E4%BD%93%E5%AD%97%E7%AC%A6%E5%92%8C-LaTeX-%E8%A1%8C%E5%86%85%E5%85%AC%E5%BC%8F"><span class="toc-text">HTML 实体字符和 LaTeX 行内公式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Emoji-%E8%A1%A8%E6%83%85"><span class="toc-text">Emoji 表情</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E8%A1%8C%E7%BA%A7%EF%BC%9A%E9%93%BE%E6%8E%A5%E3%80%81%E5%9B%BE%E7%89%87%E3%80%81%E8%A7%86%E9%A2%91%E3%80%81%E8%A7%92%E6%A0%87%E3%80%81%E8%B7%B3%E8%BD%AC"><span class="toc-text">六、行级：链接、图片、视频、角标、跳转</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%93%BE%E6%8E%A5"><span class="toc-text">链接</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%86%85%E5%BC%8F-inline"><span class="toc-text">内式 (inline)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E5%BC%8F-reference"><span class="toc-text">参考式 (reference)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#HTML-%E6%A0%BC%E5%BC%8F"><span class="toc-text">HTML 格式</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/33319.html" title="折腾我的小栈"><img src="/asset/cove/07.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="折腾我的小栈"/></a><div class="content"><a class="title" href="/posts/33319.html" title="折腾我的小栈">折腾我的小栈</a><time datetime="2021-08-28T00:18:28.000Z" title="发表于 2021-08-28 08:18:28">2021-08-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/32745.html" title="Markdown Syntax"><img src="/asset/cove/09.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Markdown Syntax"/></a><div class="content"><a class="title" href="/posts/32745.html" title="Markdown Syntax">Markdown Syntax</a><time datetime="2018-08-30T00:18:28.000Z" title="发表于 2018-08-30 08:18:28">2018-08-30</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/4911.html" title="旅途计划"><img src="/asset/cove/08.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="旅途计划"/></a><div class="content"><a class="title" href="/posts/4911.html" title="旅途计划">旅途计划</a><time datetime="2018-08-29T00:18:28.000Z" title="发表于 2018-08-29 08:18:28">2018-08-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/47376.html" title="生活很温馨"><img src="/asset/cove/01.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="生活很温馨"/></a><div class="content"><a class="title" href="/posts/47376.html" title="生活很温馨">生活很温馨</a><time datetime="2018-08-28T00:18:28.000Z" title="发表于 2018-08-28 08:18:28">2018-08-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/20990.html" title="游记很随意"><img src="/asset/cove/02.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="游记很随意"/></a><div class="content"><a class="title" href="/posts/20990.html" title="游记很随意">游记很随意</a><time datetime="2018-08-28T00:18:28.000Z" title="发表于 2018-08-28 08:18:28">2018-08-28</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>function loadWaline () {
+  function insertCSS () {
+    const link = document.createElement("link")
+    link.rel = "stylesheet"
+    link.href = "https://cdn.jsdelivr.net/npm/@waline/client/dist/waline.min.css"
+    document.head.appendChild(link)
+  }
+
+  function initWaline () {
+    const waline = Waline.init(Object.assign({
+      el: '#waline-wrap',
+      serverURL: 'https://waline.huyun.me',
+      pageview: false,
+      dark: 'html[data-theme="dark"]',
+      path: window.location.pathname,
+      comment: true,
+    }, null))
+  }
+
+  if (typeof Waline === 'function') initWaline()
+  else {
+    insertCSS()
+    getScript('https://cdn.jsdelivr.net/npm/@waline/client/dist/waline.min.js').then(initWaline)
+  }
+}
+
+if ('Waline' === 'Waline' || !false) {
+  if (false) btf.loadComment(document.getElementById('waline-wrap'),loadWaline)
+  else setTimeout(loadWaline, 0)
+} else {
+  function loadOtherComment () {
+    loadWaline()
+  }
+}</script><script>(()=>{
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://twikoo.huyun.me/',
+      region: '',
+      onCommentLoaded: function () {
+        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      }
+    }, null))
+  }
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'https://twikoo.huyun.me/',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(function (res) {
+      countELement.innerText = res[0].count
+    }).catch(function (err) {
+      console.error(err);
+    });
+  }
+
+  const runFn = () => {
+    init()
+    GLOBAL_CONFIG_SITE.isPost && getCount()
+  }
+
+  const loadTwikoo = () => {
+    if (typeof twikoo === 'object') {
+      setTimeout(runFn,0)
+      return
+    } 
+    getScript('https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js').then(runFn)
+  }
+
+  if ('Waline' === 'Twikoo' || !false) {
+    if (false) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo()
+  } else {
+    window.loadOtherComment = () => {
+      loadTwikoo()
+    }
+  }
+})()</script></div><script>window.addEventListener('load', () => {
+  const changeContent = (content) => {
+    if (content === '') return content
+
+    content = content.replace(/<img.*?src="(.*?)"?[^\>]+>/ig, '[图片]') // replace image link
+    content = content.replace(/<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, '[链接]') // replace url
+    content = content.replace(/<pre><code>.*?<\/pre>/gi, '[代码]') // replace code
+    content = content.replace(/<[^>]+>/g,"") // remove html tag
+
+    if (content.length > 150) {
+      content = content.substring(0,150) + '...'
+    }
+    return content
+  }
+
+  const generateHtml = array => {
+    let result = ''
+
+    if (array.length) {
+      for (let i = 0; i < array.length; i++) {
+        result += '<div class=\'aside-list-item\'>'
+
+        if (true) {
+          const name = 'src'
+          result += `<a href='${array[i].url}' class='thumbnail'><img ${name}='${array[i].avatar}' alt='${array[i].nick}'></a>`
+        }
+
+        result += `<div class='content'>
+        <a class='comment' href='${array[i].url}' title='${array[i].content}'>${array[i].content}</a>
+        <div class='name'><span>${array[i].nick} / </span><time datetime="${array[i].date}">${btf.diffDate(array[i].date, true)}</time></div>
+        </div></div>`
+      }
+    } else {
+      result += '没有评论'
+    }
+
+    let $dom = document.querySelector('#card-newest-comments .aside-list')
+    $dom.innerHTML= result
+    window.lazyLoadInstance && window.lazyLoadInstance.update()
+    window.pjax && window.pjax.refresh($dom)
+  }
+
+  const getComment = () => {
+    const loadWaline = () => {
+      Waline.RecentComments({
+        serverURL: 'https://waline.huyun.me',
+        count: 6
+      }).then(({comments}) => {
+        const walineArray = comments.map(e => {
+          return {
+            'content': changeContent(e.comment),
+            'avatar': e.avatar,
+            'nick': e.nick,
+            'url': e.url + '#' + e.objectId,
+            'date': e.insertedAt,
+          }
+        })
+        saveToLocal.set('waline-newest-comments', JSON.stringify(walineArray), 10/(60*24))
+        generateHtml(walineArray)
+      }).catch(e => {
+        const $dom = document.querySelector('#card-newest-comments .aside-list')
+        $dom.innerHTML= "无法获取评论，请确认相关配置是否正确"
+      }) 
+    }
+
+    if (typeof Waline === 'function') loadWaline() 
+    else getScript('https://cdn.jsdelivr.net/npm/@waline/client/dist/waline.min.js').then(loadWaline)
+  }
+
+  const newestCommentInit = () => {
+    if (document.querySelector('#card-newest-comments .aside-list')) {
+      const data = saveToLocal.get('waline-newest-comments')
+      if (data) {
+        generateHtml(JSON.parse(data))
+      } else {
+        getComment()
+      }
+    }
+  }
+
+  newestCommentInit()
+  document.addEventListener('pjax:complete', newestCommentInit)
+})</script><div class="aplayer no-destroy" data-id="60198" data-server="netease" data-type="playlist" data-fixed="true" data-mini="true" data-autoplay="true"> </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: true,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  typeof preloader === 'object' && preloader.initLoading()
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', 'GTM-TJQVR2G', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
